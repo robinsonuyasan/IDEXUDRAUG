@@ -107,3 +107,15 @@ CREATE PROCEDURE CONSULTAR_ALUMNOS
  JOIN ASIGNATURA A ON A.IDCLASE = EP.IDCLASE;
 
  SELECT * FROM VW_PROF_ASIGNATURA;
+
+
+  /*       _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+		|																		|
+		| CREACIÓN DE INDICES PARA OPTIMIZAR                     			    |
+		|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|
+*/
+
+ 
+ CREATE INDEX IDX_ALUM01 ON ESTUDIANTE (NOMBRES);
+ CREATE INDEX IDX_ALUM02 ON ESTUDIANTE (IDESTUDIANTE);
+ CREATE INDEX IDX_PROF01 ON PROFESOR (IDPROFESOR);
